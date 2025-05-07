@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostActivity">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Create -Admin"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="200dp" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Post Title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Post Description"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+
+
+
+    <Button
+        android:id="@+id/btnCreatePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDescription"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

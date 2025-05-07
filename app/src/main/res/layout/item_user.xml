@@ -1,0 +1,32 @@
+<!-- res/layout/item_user.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEEEEE">
+
+    <TextView android:id="@+id/tvUsername"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/tvUserEmail"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/tvUserRole"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/btnDeleteUser"
+        android:layout_marginTop="5dp"
+        android:text="Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF4444"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

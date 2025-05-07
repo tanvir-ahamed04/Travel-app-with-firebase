@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Travel App</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="prompt_currency_from">Select currency to convert from</string>
+    <string name="prompt_currency_to">Select currency to convert to</string>
+</resources>

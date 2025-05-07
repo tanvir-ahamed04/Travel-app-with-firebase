@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:background="#FFFFFF">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Slide Image -->
+                <ImageView
+                    android:id="@+id/slideImage"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/slide1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/introTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Travel App"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/slideImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/introDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Plan your journey with ease! From local transport options to international travel hubs, we provide detailed insights and personalized recommendations tailored to your trip."
+                    android:textSize="16sp"
+                    android:textColor="#555"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/introTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Offer Section -->
+                <LinearLayout
+                    android:id="@+id/offerRow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/introDescription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/slide2"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="🔥 Limited-time deals on top destinations!"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+
+                <!-- Recommendations -->
+                <TextView
+                    android:id="@+id/recommendationsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended Places"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/offerRow"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <GridLayout
+                    android:id="@+id/recommendedGrid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/recommendationsTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/slide1"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/slide2"
+                        android:scaleType="centerCrop" />
+                </GridLayout>
+
+                <Button
+                    android:id="@+id/bestDestinationBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Explore Best Destinations"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintTop_toBottomOf="@id/recommendedGrid"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Hotel Info -->
+                <TextView
+                    android:id="@+id/checkHotelInfoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Hotel Information"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/bestDestinationBtn"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <GridLayout
+                    android:id="@+id/hotelGrid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/checkHotelInfoTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/hotel1"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/hotel2"
+                        android:scaleType="centerCrop" />
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/hotelApproachText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Browse our carefully curated hotel listings to find the best accommodation that fits your budget and travel style. Stay informed with real-time updates."
+                    android:textSize="16sp"
+                    android:textColor="#555"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/hotelGrid"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <Button
+                    android:id="@+id/checkHotelPageBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Check Hotel Page"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintTop_toBottomOf="@id/hotelApproachText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Footer -->
+                <LinearLayout
+                    android:id="@+id/footer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/pic1"
+                    app:layout_constraintTop_toBottomOf="@id/checkHotelPageBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/footerDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Let us simplify your journey. With our travel app, you’ll always be informed, inspired, and ready to explore confidently."
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/contactTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Us"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/contactPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone: +123 456 7890"
+                        android:textColor="#DDDDDD"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email: info@travelapp.com"
+                        android:textColor="#DDDDDD"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/copyright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="© 2025 Travel App. All rights reserved."
+                        android:textColor="#CCCCCC"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Navigation drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_home" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

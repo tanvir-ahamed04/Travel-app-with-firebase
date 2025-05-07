@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin"
+    android:padding="24dp">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Admin Panel"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="200dp" />
+    <Button
+        android:id="@+id/btnCreatePost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Create New Destination Post"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/btnManageUsers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manage Users"
+        app:layout_constraintTop_toBottomOf="@id/btnCreatePost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/btnManagePosts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manage Posts"
+        app:layout_constraintTop_toBottomOf="@id/btnManageUsers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        app:layout_constraintTop_toBottomOf="@id/btnManagePosts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
