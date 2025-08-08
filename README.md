@@ -5,18 +5,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?logo=java&logoColor=white)
 
 ## Travel App Demo Video
-
-Here’s a concise demo of the travel app:
-
-<iframe 
-  src="https://www.viddler.com/#/embed/player?id=3194&playbackId=FkSi4fxk400Tk74rMr6Km8w5bn9tK1LRcl8Wn5CylySE&color=default" 
-  width="480" 
-  height="270" 
-  frameborder="0" 
-  allow="autoplay" 
-  title="travel-app" 
-  scrolling="no"
-></iframe>
+https://github.com/tanvir-ahamed04/Travel-app-with-firebase/blob/master/travel-app.mp4
 
 A real-time travel companion app built with Android and Firebase, featuring destination exploration, hotel search, and admin content management.
 
