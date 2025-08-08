@@ -91,12 +91,6 @@ git clone https://github.com/tanvir-ahamed04/Travel-app-with-firebase.git
 - [ ] Hotel booking API connection
 - [ ] Firebase Security Rules for roles
 
-## Screenshots
-| Feature | Preview |
-|---------|---------|
-| Login | ![Login Screen](screenshots/login.png) |
-| Destinations | ![Destinations](screenshots/destinations.png) |
-| Hotel Search | ![Hotels](screenshots/hotels.png) |
 
 ## License
 MIT License - See [LICENSE](LICENSE) for details.
