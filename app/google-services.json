@@ -1,29 +1,19 @@
-{
-  "project_info": {
-    "project_number": "189237536168",
-    "project_id": "travelappdemo-38bad",
-    "storage_bucket": "travelappdemo-38bad.firebasestorage.app"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:189237536168:android:081e86a6bd7edd29da699d",
-        "android_client_info": {
-          "package_name": "com.example.travelappdemo"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDIYyINVRXOC4IUM2ifmvQrObZ2AfjeKDA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    }
-  ],
-  "configuration_version": "1"
-}
+Adding Firebase Configuration
+Locate your google-services.json file
+
+Download it from your Firebase Console
+
+Go to: Project Settings → Your Apps → google-services.json
+
+Place the file in the correct location
+For Android projects, paste it in:
+/app/google-services.json
+(Replace the existing file if prompted)
+
+Sync your project
+Android Studio will automatically detect the changes. If not:
+
+Click "Sync Project with Gradle Files" 🔄
+
+Or run:
+./gradlew clean
