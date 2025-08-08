@@ -1,19 +1,1 @@
-Adding Firebase Configuration
-Locate your google-services.json file
 
-Download it from your Firebase Console
-
-Go to: Project Settings → Your Apps → google-services.json
-
-Place the file in the correct location
-For Android projects, paste it in:
-/app/google-services.json
-(Replace the existing file if prompted)
-
-Sync your project
-Android Studio will automatically detect the changes. If not:
-
-Click "Sync Project with Gradle Files" 🔄
-
-Or run:
-./gradlew clean
